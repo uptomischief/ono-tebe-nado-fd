@@ -259,7 +259,6 @@ blockquote {
     padding: auto 40px;
     font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
     font-weight: 400;
-    
     line-height: 120%;
     color: rgba(255, 255, 255, 1);
     z-index: 2;
@@ -297,3 +296,31 @@ blockquote {
 }
 
 /*3 секция*/
+
+.about {
+    display: grid;
+    grid-template-columns: 334px auto; /*чуть что поменять*/
+   /* grid-template-rows: 595px;*/
+}
+
+.about__logo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__logo-image {
+    width: 148px;
+    height: 114px;
+}
+
+.about__text {
+    grid-column-start: 2;
+    grid-template-rows: 1/span;
+    display: block;
+    grid: 24px;
+}
