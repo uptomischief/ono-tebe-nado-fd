@@ -202,7 +202,7 @@ blockquote {
     background-position: center;
     background-size: cover;
     min-height: 723px;
-    padding: 180px 24px 120px 24px;
+    padding: 180px 24px 120px 24px; /*margin?*/
 }
 
 .lots__heading {
@@ -211,7 +211,8 @@ blockquote {
     font-weight: 700;
     text-transform: uppercase;
     z-index: 2;
-    color:#fff
+    color:#000;
+    margin: 0 0 27px 64px;
 }
 
 .lots__card-list {
@@ -221,6 +222,76 @@ blockquote {
     list-style: none;
 }
 
-.lots__card-list-item {
+.lots__card-list-item {     /*????????*/
+    flex: 1;
+    /*min-width: 0;*/
+    width: 334px;          
+}
+
+.card {
     padding: 48px 40px;
+    min-height: 596px;
+    min-width: 334px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card__title {
+    font-size: 22px;
+    font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-style: solid;
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.card__text {
+    font-size: 20px;
+    padding: auto 40px;
+    font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
+    font-weight: 400;
+    
+    line-height: 120%;
+    color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    margin: 0;
+}
+
+.card-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.card_type_film {
+    background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+    background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+    background-image: url(../images/card-lot-03.jpg);
+}
+
+.lots__look-more-link {
+    margin: 30px auto 118px 40px;
+    display: block;
+    font-size: 20px;
+    font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    width: 192px;
+    height: 23px;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
