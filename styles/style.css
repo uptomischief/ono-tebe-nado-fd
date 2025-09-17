@@ -61,7 +61,8 @@ blockquote {
     font-size: 18px;
     line-height: 100%;
     font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
-    border-bottom: 1px solid black;
+    font-weight: 400;;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
 .header__link_active {
@@ -94,14 +95,14 @@ blockquote {
     align-items: flex-start;
     color: #000;
     font-size: 18px;
-    line-height: 100%;
+    line-height: 24.3px; /*c 100% выглядит как в макете, по фигме шрифта тогда не сходится, проработать*/
     font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
 }
 
 .address a {
     text-decoration: none;
     color: #000;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
 
@@ -167,7 +168,7 @@ blockquote {
     justify-content: end;
     align-items: center;
     gap: 78px;
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
 }
 
 .cover__description-text {
@@ -202,7 +203,7 @@ blockquote {
     background-position: center;
     background-size: cover;
     min-height: 723px;
-    padding: 180px 24px 120px 24px; /*margin?*/
+    padding: 180px 24px 0px 24px; /*margin?*/
 }
 
 .lots__heading {
@@ -211,7 +212,7 @@ blockquote {
     font-weight: 700;
     text-transform: uppercase;
     z-index: 2;
-    color:#000;
+    color:rgba(0, 0, 0, 1);
     margin: 0 0 27px 64px;
 }
 
@@ -366,3 +367,64 @@ blockquote {
 }
 
 /*подвал*/
+
+.footer {
+    /*margin-top: 180px;*/
+    padding: 0px 50px 82px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        'address footer__menu footer__social-list-item';
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.footer__social-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.footer__social-list-item {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    justify-self: end;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer__menu {
+    /*justify-self: center;*/
+    /**align-items: center;*/
+    justify-items: center;
+    /*justify-content: center;*/
+    align-items: center;
+    display: grid;
+}
+
+.footer__menu-list {
+    display:block;
+    list-style: none;
+}
+
+.footer_address {
+    justify-self: start;
+}
+
+.footer__menu-link {
+    color: rgba(0, 0, 0, 1)00;
+    font-size: 18px;
+    line-height: 100%;
+    font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.footer__menu-link_active {
+    border: none;
+}
+
+.footer__links-list-item_no-bullit .footer__menu-link {
+    text-decoration: none;
+}
