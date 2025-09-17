@@ -73,7 +73,7 @@ blockquote {
 }
 
 .header__logo {
-    grid-area: header__logo;
+    /*grid-area: header__logo;*/ /*и без этого норм шпарит*/
     display: block;
     width: 148px;
     height: 105px;
@@ -261,7 +261,7 @@ blockquote {
     font-weight: 400;
     line-height: 120%;
     color: rgba(255, 255, 255, 1);
-    z-index: 2;
+    z-index: 1;
     margin: 0;
 }
 
@@ -285,6 +285,7 @@ blockquote {
 
 .lots__look-more-link {
     margin-top: 30px;
+    margin-left: 40px;
     display: block;
     font-size: 20px;
     font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
@@ -298,9 +299,27 @@ blockquote {
 /*3 секция*/
 
 .about {
-    display: grid;
-    grid-template-columns: 334px auto; /*чуть что поменять*/
+    /*display: grid;*/
+    display: flex;
+    /*grid-template-columns: 334px 72px 693px; */ 
+    /*gap: 120px;*//*чуть что поменять*/ /*72px*/
    /* grid-template-rows: 595px;*/
+    grid-template-areas: 
+        'about_logo about_descriotion';
+    justify-content: space-between;
+    align-content: center;
+    align-items: start; /*center*/
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    min-height: 595px;
+    padding: 120px 24px 180px; /*margin?*/
+    margin: 0 auto;
+}
+
+.about__column {
+    display: flex;
+    justify-content: center;  /*все поехало*/
 }
 
 .about__logo {
@@ -311,6 +330,8 @@ blockquote {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 35px 72px 320px 47px;
+    flex-shrink: 0; /*не сжимается*/
 }
 
 .about__logo-image {
@@ -318,9 +339,30 @@ blockquote {
     height: 114px;
 }
 
-.about__text {
-    grid-column-start: 2;
-    grid-template-rows: 1/span;
-    display: block;
-    grid: 24px;
+.about_descriotion {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  padding-top: 130px;
+  font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
+  color: rgba(0, 0, 0, 1);
 }
+
+.about__title {
+    padding-bottom: 100px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.about__text {      /*текст слегка не совпадлает подредачить*/
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/*подвал*/
