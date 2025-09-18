@@ -377,7 +377,7 @@ blockquote {
         'address footer__menu footer__social-list-item';
     justify-content: space-between;
     align-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 .footer__social-icon {
@@ -395,7 +395,7 @@ blockquote {
 }
 
 .footer__menu {
-    /*justify-self: center;*/
+    justify-self: center;
     /**align-items: center;*/
     justify-items: center;
     /*justify-content: center;*/
@@ -404,21 +404,25 @@ blockquote {
 }
 
 .footer__menu-list {
-    display:block;
+    display:flex;
+    flex-direction: column;
     list-style: none;
+    text-align: center;
 }
 
 .footer_address {
     justify-self: start;
 }
 
+
 .footer__menu-link {
-    color: rgba(0, 0, 0, 1)00;
+    color: rgba(0, 0, 0, 1);
     font-size: 18px;
     line-height: 100%;
     font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
     font-weight: 400;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
+    text-decoration: none;
 }
 
 .footer__menu-link_active {
