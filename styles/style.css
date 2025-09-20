@@ -1,28 +1,4 @@
 /* место для вашего кода */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin:0 auto;
-    background-color: #fff;
-    font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
-    max-width: 1100px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul,
-blockquote {
-    margin: 0;
-    padding: 0;
-}
 
 .header {
     padding: 95px 50px;
@@ -44,7 +20,7 @@ blockquote {
 
 .header_links-list {
     display: flex;
-    gap: 32px;
+    gap: 33px;
     list-style: none;
 }
 
@@ -74,7 +50,6 @@ blockquote {
 }
 
 .header__logo {
-    /*grid-area: header__logo;*/ /*и без этого норм шпарит*/
     display: block;
     width: 148px;
     height: 105px;
@@ -95,7 +70,7 @@ blockquote {
     align-items: flex-start;
     color: #000;
     font-size: 18px;
-    line-height: 24.3px; /*c 100% выглядит как в макете, по фигме шрифта тогда не сходится, проработать*/
+    line-height: 139%; /*24.3 было до изменения*/
     font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
 }
 
@@ -119,7 +94,8 @@ blockquote {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 165px 50px 50px;
+    width: 100%;
+    padding: 165px 20px 50px 50px;
 }
 
 .overlay {
@@ -142,19 +118,22 @@ blockquote {
     line-height: 115%;
     letter-spacing: 30%;
     color: rgba(255, 255, 255, 1);
-    margin-bottom: 135px;
 }
 
 .aligned-text {
     display: block;
+    letter-spacing: 0.3em;
 }
 
 .aligned-text_center {
     text-align: center;
+    margin-top: 20px;
+    padding-left: 2px;
 }
 
 .aligned-text_right {
     text-align: right;
+    margin-top: 20px;
 }
 
 .letter-spacing-extended {
@@ -165,16 +144,17 @@ blockquote {
     position: relative ;
     z-index: 2;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
-    gap: 78px;
     color: rgba(255, 255, 255, 1);
+    margin-top: 105px;
+    margin-right: 30px;
 }
 
 .cover__description-text {
     font-size: 22px;
     text-transform: uppercase;
-    word-spacing: 18px;
+    word-spacing: 15.7px;
     letter-spacing: 0.02em;
 
 }
@@ -203,7 +183,7 @@ blockquote {
     background-position: center;
     background-size: cover;
     min-height: 723px;
-    padding: 180px 24px 0px 24px; /*margin?*/
+    padding: 180px 24px 0px 24px; 
 }
 
 .lots__heading {
@@ -213,19 +193,19 @@ blockquote {
     text-transform: uppercase;
     z-index: 2;
     color:rgba(0, 0, 0, 1);
-    margin: 0 0 27px 64px;
+    margin-left: 40px;
 }
 
 .lots__card-list {
+    margin-top: 27px;
     display: flex;
     flex-direction: row;
     gap: 25px;
     list-style: none;
 }
 
-.lots__card-list-item {     /*????????*/
+.lots__card-list-item {   
     flex: 1;
-    /*min-width: 0;*/
     width: 334px;          
 }
 
@@ -285,7 +265,7 @@ blockquote {
 }
 
 .lots__look-more-link {
-    margin-top: 30px;
+    margin-top: 32px;
     margin-left: 40px;
     display: block;
     font-size: 20px;
@@ -300,27 +280,23 @@ blockquote {
 /*3 секция*/
 
 .about {
-    /*display: grid;*/
     display: flex;
-    /*grid-template-columns: 334px 72px 693px; */ 
-    /*gap: 120px;*//*чуть что поменять*/ /*72px*/
-   /* grid-template-rows: 595px;*/
     grid-template-areas: 
         'about_logo about_descriotion';
     justify-content: space-between;
     align-content: center;
-    align-items: start; /*center*/
+    align-items: start; 
     position: relative;
     background-position: center;
     background-size: cover;
     min-height: 595px;
-    padding: 120px 24px 180px; /*margin?*/
+    padding: 120px 24px 180px; 
     margin: 0 auto;
 }
 
 .about__column {
     display: flex;
-    justify-content: center;  /*все поехало*/
+    justify-content: center;  
 }
 
 .about__logo {
@@ -332,7 +308,7 @@ blockquote {
     align-items: center;
     justify-content: center;
     margin: 35px 72px 320px 47px;
-    flex-shrink: 0; /*не сжимается*/
+    flex-shrink: 0; 
 }
 
 .about__logo-image {
@@ -344,7 +320,7 @@ blockquote {
   display: flex;
   flex-direction: column;
   justify-self: end;
-  padding-top: 130px;
+  padding-top: 137px;
   font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
   color: rgba(0, 0, 0, 1);
 }
@@ -357,19 +333,21 @@ blockquote {
     text-transform: uppercase;
 }
 
-.about__text {      /*текст слегка не совпадлает подредачить*/
+.about__text {      
     display: flex;
     flex-direction: column;
     gap: 24px;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+    font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
+    margin-top: 4px;
+    margin-right: 4px;
 }
 
 /*подвал*/
 
 .footer {
-    /*margin-top: 180px;*/
     padding: 0px 50px 82px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -396,9 +374,7 @@ blockquote {
 
 .footer__menu {
     justify-self: center;
-    /**align-items: center;*/
     justify-items: center;
-    /*justify-content: center;*/
     align-items: center;
     display: grid;
 }
@@ -418,7 +394,7 @@ blockquote {
 .footer__menu-link {
     color: rgba(0, 0, 0, 1);
     font-size: 18px;
-    line-height: 100%;
+    line-height: 118%;
     font-family: 'Raleway', 'Open Sans', 'Arial', sans-serif;
     font-weight: 400;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
