@@ -35,6 +35,7 @@
   font-family: "Raleway", "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   border-bottom: 1px solid rgba(0, 0, 0, 1);
+  text-decoration: none;
 }
 
 .header__link_active {
@@ -68,6 +69,7 @@
   font-size: 18px;
   line-height: 24.3px;
   font-family: "Raleway", "Open Sans", "Arial", sans-serif;
+  font-style: normal;
 }
 
 .address__link {
@@ -111,8 +113,11 @@
   font-family: "Raleway", "Open Sans", "Arial", sans-serif;
   font-weight: 700;
   line-height: 115%;
-  letter-spacing: 30%;
+  letter-spacing: 0.3em;
   color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .aligned-text {
@@ -122,13 +127,11 @@
 
 .aligned-text_center {
   text-align: center;
-  margin-top: 20px;
   padding-left: 2px;
 }
 
 .aligned-text_right {
   text-align: right;
-  margin-top: 20px;
 }
 
 .letter-spacing-extended {
@@ -174,9 +177,6 @@
 
 .lots {
   position: relative;
-  background-position: center;
-  background-size: cover;
-  min-height: 723px;
   padding: 180px 24px 0px 24px;
 }
 
@@ -193,13 +193,13 @@
 .lots__card-list {
   margin-top: 27px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 25px;
   list-style: none;
 }
 
 .lots__card-list-item {
-  flex: 1;
   width: 334px;
 }
 
@@ -222,7 +222,7 @@
   font-weight: 700;
   line-height: 120%;
   text-transform: uppercase;
-  font-style: solid;
+  font-style: normal;
   text-decoration: underline;
   color: rgba(255, 255, 255, 1);
   position: relative;
@@ -231,7 +231,6 @@
 
 .card__text {
   font-size: 20px;
-  padding: auto 40px;
   font-family: "Raleway", "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   line-height: 120%;
@@ -260,13 +259,11 @@
 .lots__look-more-link {
   margin-top: 32px;
   margin-left: 40px;
-  display: block;
+  display: inline-block;
   font-size: 20px;
   font-family: "Raleway", "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   color: rgba(0, 0, 0, 1);
-  width: 192px;
-  height: 23px;
   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
@@ -277,11 +274,8 @@
   justify-content: space-between;
   align-content: center;
   align-items: start;
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  min-height: 595px;
-  padding: 120px 24px 180px;
+  position: relative; 
+  padding: 118px 24px 180px;
   margin: 0 auto;
 }
 
@@ -350,7 +344,7 @@
   height: 48px;
 }
 
-.footer__social-list-item {
+.footer__social-list {
   display: flex;
   gap: 48px;
   list-style: none;
@@ -361,14 +355,9 @@
 
 .footer__menu {
   justify-self: center;
-  justify-items: center;
-  align-items: center;
-  display: grid;
 }
 
 .footer__menu-list {
-  display: flex;
-  flex-direction: column;
   list-style: none;
   text-align: center;
 }
